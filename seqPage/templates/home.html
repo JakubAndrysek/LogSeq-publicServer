@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div class="container">
+        <h1>{{title}}</h1>
+        {% for key, value in pages.items() %}
+            <div class="page">
+                <h2><a href="/{{key}}/{{value}}">{{key}}</a></h2>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
